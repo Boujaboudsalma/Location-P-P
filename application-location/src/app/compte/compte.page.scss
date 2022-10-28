@@ -1,0 +1,39 @@
+.compte{
+  font-size: 28px;
+  font-weight: bold;
+  margin-left:15px;
+}
+.icon-compte{
+  color: black;
+  margin-right: 20px;
+  width: 32px;
+  height: 32px;
+
+}
+
+ion-toolbar{
+  --color:black;
+  --background:#f0f0f0;
+
+}
+.icon-footer{
+
+  height: 34px;
+  width: 34px;
+  padding-left: 35px;
+
+}
+#compte{
+  color: #80a1c1;
+}
+ion-item{
+  --padding-bottom:21px;
+  --padding-top:21px;
+  --background:#f0f0f0;
+}
+ion-content{
+  --background:#f0f0f0;
+}
+a{
+  color: black;
+}
