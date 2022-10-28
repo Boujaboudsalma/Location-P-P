@@ -1,0 +1,41 @@
+
+body{
+  background-color:#f0f0f0;
+
+}
+.bienvenue{
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 109px;
+
+}
+.logo{
+  align-items: center;
+  padding-top: 57px;
+  width: 290px;
+}
+.presentation{
+  text-align:center;
+  font-size: 16px;
+  padding-top: 57px;
+}
+.contenu-central{
+  display: flex;
+  flex-direction: column;
+
+}
+.btn{
+  display: flex;
+  flex-direction: column;
+  padding-top: 57px;
+  align-items: center;
+}
+.btn2{
+  padding-top: 37px;
+}
+ion-button{
+  --border-radius: 15px;
+
+}
+
