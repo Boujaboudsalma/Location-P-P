@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Paramétre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-item>
+    <ion-label ><h3>Kilométre</h3></ion-label>
+    <ion-input class="taille" placeholder="kilométre maximun" type="number"></ion-input>
+  </ion-item>
+  <ion-item button detail="true">
+    <ion-label>
+      <h3>Paramètres du compte</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item button detail="true">
+    <ion-label>
+      <h3>Changer de mot de passe</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item button detail="true">
+    <ion-label>
+      <h3>Ajouter numéro bancaire</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label><h3>Langue</h3></ion-label>
+    <ion-select class="taille" placeholder="Choisir une langue">
+      <ion-select-option class="taille" value="Français">Français</ion-select-option>
+      <ion-select-option class="taille" value="ndls">Néerlandais</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h3>Mode vacances</h3></ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+
+ <div class="btn-deconnexion"><ion-button (click)="logout()" expand="block" fill="outline">Déconnexion</ion-button></div>
+
+</ion-content>
+
+ <ion-footer collapse="fade">
+  <ion-toolbar>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button href="categories">
+      <ion-icon class="icon-footer" name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="recherche">
+      <ion-icon class="icon-footer" name="search-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="rajouter-produit">
+      <ion-icon id="plus" class="icon-footer" name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="">
+      <ion-icon class="icon-footer" name="chatbubble-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="compte">
+      <ion-icon class="icon-footer" name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-toolbar>
+</ion-footer>
