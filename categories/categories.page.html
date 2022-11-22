@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title id='tittle'>Bonjour,</ion-title>
+   <img id ='logo' weight='84' height='34'src="../../assets/LogoKIA-1.png" alt="Logo Kira" />
+  </ion-toolbar>
+  <link rel="stylesheet" href="categories.page.scss">
+</ion-header>
+
+<ion-content id='body'>
+  <ion-list routerLink ="/accceuil-btp" lines="none">
+    <ion-item  >
+        <div  class = "contenant">
+          <img id ='img1' width ='200' height = "120"src = "../../assets/btp.jpg"/>
+        </div>
+        <div class = 'text_contenent'>
+         <ion-label id="text1" class="text_center">BTP</ion-label>
+        </div>
+    </ion-item>
+  </ion-list>
+  <ion-list routerLink ="/acceuil-audiovisuel" lines="none">
+    <ion-item  >
+      <div class = "contenant">
+          <img id ='img2' width ='200' height = "120"src = "../../assets/audiovisuel.jpeg"/>
+      </div>
+      <div class = 'text_contenent'>
+          <ion-label id="text2"class="text_center">Eléctronique</ion-label>
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-list routerLink ="/acceuil-jardin" lines="none">
+    <ion-item>
+      <div class = "contenant">
+          <img id ='img3' width ='200' height = "120"src = "../../assets/jardin.jpg"/>
+      </div>
+      <div class = 'text_contenent'>
+          <ion-label id="text3" class="text_center">Jardinage</ion-label>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button href="acceuil-jardin">
+      <ion-icon class="icon-footer" name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="recherche">
+      <ion-icon class="icon-footer" name="search-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="rajouter-produit">
+      <ion-icon id="plus" class="icon-footer" name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="">
+      <ion-icon class="icon-footer" name="chatbubble-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="compte">
+      <ion-icon class="icon-footer" name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-toolbar>
+</ion-footer>
