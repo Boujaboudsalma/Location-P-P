@@ -1,0 +1,45 @@
+
+.reste {
+  text-transform: lowercase;
+}
+
+ion-content {
+  --background : #F0F0F0 ;
+
+}
+
+ion-card {
+  --background : transparent
+  box-shadow : none ;
+}
+
+
+.logo {
+  height : 300px ;
+  margin-left : 100px ;
+}
+
+
+ion-item {
+  color : #74787E ;
+  --border-color : #F0F0F0 ;
+  --highlight-color-focused : #215AB7 ;
+  --padding-start : 0 ;
+  --inner-padding-end : 0 ;
+
+  ion-input {
+    color : #74787E ;
+  }
+  ion-icon {
+    padding-right : 6px ;
+    font-size : 18px ;
+  }
+
+}
+
+
+ion-input:hover {
+  color : #215AB7 ;
+}
+
+
