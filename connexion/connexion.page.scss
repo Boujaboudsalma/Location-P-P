@@ -1,0 +1,61 @@
+
+ion-content{
+  --background:#f0f0f0;
+
+}
+.bienvenue{
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 50px;
+
+}
+.logo{
+  text-align: center;
+}
+.imglogo {
+  padding-top: 45px;
+  width: 200px;
+}
+.presentation{
+  text-align: center;
+  font-size: 16px;
+  padding-top: 27px;
+  margin-right:10px;
+  margin-left:10px;
+}
+.contenu-central{
+  display: flex;
+  flex-direction: column;
+
+}
+.btn{
+  display: flex;
+  flex-direction: column;
+  padding-top: 57px;
+  align-items: center;
+}
+.btn2{
+  padding-top: 37px;
+  padding-bottom: 95px;
+}
+ion-button{
+  --border-radius: 15px;
+
+}
+.langue{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 30px;
+}
+.icon-terre{
+  margin-right: 5px;
+}
+select{
+ border: none;
+ background:#f0f0f0;;
+}
+
+
