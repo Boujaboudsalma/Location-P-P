@@ -1,0 +1,49 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+
+
+  <div class="logo"><img class="imglogo" src="../../assets/LogoKIA-1.png" alt="Logo Kira"/></div>
+
+  <div>
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input [(ngModel)]="dataUser.nom" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prénom</ion-label>
+      <ion-input [(ngModel)]="dataUser.prenom" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Identifiant</ion-label>
+      <ion-input [(ngModel)]="dataUser.identifiant" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngModel)]="dataUser.email" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Adresse</ion-label>
+      <ion-input [(ngModel)]="dataUser.adresse" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ville</ion-label>
+      <ion-input [(ngModel)]="dataUser.ville" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mot de passe</ion-label>
+      <ion-input [(ngModel)]="dataUser.password" type="password"></ion-input>
+    </ion-item>
+
+<br>
+  <ion-button (click)="signUp()" expand="block" >Créez un compte</ion-button>
+</div>
+
+<br>
+<div class="btn1">
+<p >Vous avez déjà un compte ?</p>
+<div><ion-button href="la-connexion">Connectez-vous</ion-button></div>
+</div>
+</ion-content>
