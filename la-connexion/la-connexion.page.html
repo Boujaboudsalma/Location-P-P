@@ -1,0 +1,28 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+
+
+  <div class="logo"><img class="imglogo" src="../../assets/LogoKIA-1.png" alt="Logo Kira"/></div>
+
+  <div *ngIf="!connected">
+  <ion-item>
+    <ion-label>E-mail</ion-label>
+    <ion-input type="email"  [(ngModel)]="dataUser.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Mot de passe</ion-label>
+    <ion-input type="password" [(ngModel)]="dataUser.password"></ion-input>
+  </ion-item>
+
+  <br>
+
+  <ion-button (click)="login()" expand="block">Connectez-vous</ion-button>
+
+  </div>
+  <div *ngIf="connected">
+    <h2>Vous êtes bien connecté</h2>
+  </div>
+</ion-content>
