@@ -1,0 +1,49 @@
+.titre-cgu{
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+
+}
+.text-cgu{
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+h3{
+  font-size: 18px;
+  font-weight: bold;
+}
+ion-radio {
+  --border-radius: 4px;
+  --inner-border-radius: 4px;
+
+  --color: #ddd;
+  --color-checked: #6815ec;
+}
+
+ion-radio.ios {
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+.radio-checked.ios {
+  border-color: #6815ec;
+}
+.accepter{
+  display: flex;
+  flex-direction: row;
+}
+.accepter-text{
+  padding-left: 7px;
+}
+.btn-radio{
+  margin-top: 15px;
+}
+.btn-accepter{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
