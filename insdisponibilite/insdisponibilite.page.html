@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Indisponibilité</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="isData">
+  <div >
+  <ion-datetime
+    presentation="date"
+    [multiple]="true"
+    (ionChange)="indisponibilite($event)"
+    [value]="this.dataUser[0].indisponibilite"
+    >
+    <span slot="title">Sélectionnes vos Indisponibilités</span>
+  </ion-datetime>
+  <ion-button color="primary" slot="buttons" expand="block"(click)="confirm()">Confirmer</ion-button>
+</div>
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button href="categories">
+      <ion-icon class="icon-footer" name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="recherche">
+      <ion-icon class="icon-footer" name="search-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="ajout">
+      <ion-icon id="plus" class="icon-footer" name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="chat">
+      <ion-icon class="icon-footer" name="chatbubble-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="compte">
+      <ion-icon class="icon-footer" name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-toolbar>
+</ion-footer>
