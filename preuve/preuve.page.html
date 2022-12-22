@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Ma preuve de paiement
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Vous pouvez charger la preuve de paiement ici<br>
+      </p>
+      <ion-item lines="none">
+        <ion-button color = "secondary" (click)="addPhotoToGallery()">
+          <ion-icon name="camera"></ion-icon>camera</ion-button>
+      </ion-item>
+</ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label>Titre: </ion-label>
+      <ion-input [(ngModel)]="firebaseData.text" type="text" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Marque: </ion-label>
+      <ion-input  [(ngModel)]="firebaseData.marque" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prix: </ion-label>
+      <ion-input [(ngModel)]="firebaseData.number" type="number"></ion-input>
+    </ion-item>
+    <ion-item lines="none" >
+      <ion-button expand="block" color = "tertiary" (click)="addFirebase()" expand="block" (click)="presentAlert()" >
+       <ion-icon name="cloud-upload"></ion-icon>Ajouter</ion-button>
+       </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button routerLink="/categories">
+          <ion-icon class="icon-footer" name="home-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/recherche">
+          <ion-icon class="icon-footer" name="search-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/ajout">
+          <ion-icon id="plus" class="icon-footer" name="add-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button href="">
+          <ion-icon class="icon-footer" name="chatbubble-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/connect">
+          <ion-icon class="icon-footer" name="person-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
+
