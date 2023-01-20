@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recherche</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+<ion-item line="none" routerLink="/recherche">
+  <ion-thumbnail slot="start">
+    <img src="../../assets/btp.jpg">
+  </ion-thumbnail>
+  <ion-label> BTP</ion-label>
+</ion-item>
+</ion-card>
+<ion-card>
+  <ion-item line="none" routerLink="/search-elec">
+    <ion-thumbnail slot="start">
+      <img src="../../assets/audiovisuel.jpeg">
+    </ion-thumbnail>
+    <ion-label>Electronique</ion-label>
+  </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item line="none" routerLink="/search-jard">
+      <ion-thumbnail slot="start">
+        <img src="../../assets/jardin.jpg">
+      </ion-thumbnail>
+      <ion-label>Jardinage</ion-label>
+    </ion-item>
+    </ion-card>
+
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button href="categories">
+      <ion-icon class="icon-footer" name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="cherche">
+      <ion-icon class="icon-footer" name="search-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="ajout">
+      <ion-icon id="plus" class="icon-footer" name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="compte">
+      <ion-icon class="icon-footer" name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-toolbar>
+</ion-footer>
+
