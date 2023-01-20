@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mot de passe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+
+<ion-card>
+<ion-card-content>
+<ion-card-subtitle>
+<ion-text>E</ion-text><ion-text class="reste">ntrez votre e-mail pour changer de mot de passe</ion-text>
+</ion-card-subtitle>
+<div>
+<ion-item>
+<ion-input id="email" placeholder="email" expand="block"></ion-input>
+<ion-icon slot="start" name="at-circle-outline"></ion-icon>
+</ion-item>
+<ion-button expand="block" (click)="reset()">Cliquez-ici</ion-button>
+</div>
+</ion-card-content>
+</ion-card>
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button href="categories">
+      <ion-icon class="icon-footer" name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="recherche">
+      <ion-icon class="icon-footer" name="search-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="ajout">
+      <ion-icon id="plus" class="icon-footer" name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="chat">
+      <ion-icon class="icon-footer" name="chatbubble-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button href="compte">
+      <ion-icon class="icon-footer" name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-toolbar>
+</ion-footer>
