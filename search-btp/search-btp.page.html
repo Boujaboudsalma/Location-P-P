@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Search..." [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let product of products | filter:filterTerm">
+  <ion-list>
+    <ion-item lines="none" [routerLink]="['/BTP-annonces']">
+      <ion-thumbnail slot="start">
+        <img [src]="product.image">
+      </ion-thumbnail>
+      <ion-label>{{product.titre}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-card>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button routerLink="/categories">
+          <ion-icon class="icon-footer" name="home-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/cherche">
+          <ion-icon class="icon-footer" name="search-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/ajout">
+          <ion-icon id="plus" class="icon-footer" name="add-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/compte">
+          <ion-icon class="icon-footer" name="person-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
