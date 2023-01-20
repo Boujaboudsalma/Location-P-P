@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Paiement</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" (click)="presentAlert()">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card  *ngFor="let item of dataUser | async">
+  <ion-card-header>
+    <ion-card-title>
+     <ion-label> Hello, {{ item.prenom}}</ion-label>
+    </ion-card-title>
+    <ion-card-subtitle>
+      Merci de faire <br>
+      confiance à Kira.
+  </ion-card-subtitle>
+  </ion-card-header>
+  <div>
+    <ion-card-content >
+      <ion-icon name="card-outline"></ion-icon>
+      <p>Vous voulez <strong >{{titreProduit}}</strong> de la marque <strong >{{marque}}</strong> pour la durée de <strong >{{selectDate.length}} jours </strong> <strong >({{selectDate}})</strong>.</p> <br>
+
+      <p>Dès que nous aurons reçu la confirmation du paiement de <strong>{{prix*selectDate.length+caution}}€</strong> (<strong  >{{prix*selectDate.length}}€ </strong> pour la location et <strong >{{caution}}€</strong> pour la caution).</p><br>
+
+      <p>Nous vous enverrons un mail avec les coordonnées du propriétaire et vous pourrez communiquer <br>
+        avec<strong></strong> .<br>
+      </p>
+
+      <ion-item lines="none">
+        <ion-row color="warning" class="carte">Kira SA _ IBAN</ion-row>
+        <ion-icon name="card-outline"></ion-icon>
+      </ion-item>
+        <p>
+          Vous pouvez verser la somme de <script>
+          </script> sur le compte ci-dessous.
+        </p>
+        <p >
+         <strong> BE5295852168164652</strong><br>
+          AXA BANK EUROPE, N.V.<br>
+          +++456/8990/97539+++<br>
+          Kira, S.A<br>
+          Populierenstraat 435, 2040 Anvers<br>
+          BELGIQUE<br>
+          </p>
+    </ion-card-content>
+  </div>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Ma preuve de paiement
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Vous pouvez charger la preuve de paiement ici<br>
+      </p>
+      <ion-item lines="none">
+        <ion-button color = "secondary" (click)="addPhotoToGallery()">
+          <ion-icon name="camera"></ion-icon>camera</ion-button>
+      </ion-item>
+      <ion-list>
+        <ion-item>
+          <ion-label>Titre: </ion-label>
+          <ion-input [(ngModel)]="paiement.titre" type="text" >{{titreProduit}}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Marque: </ion-label>
+          <ion-input  [(ngModel)]="paiement.marque" type="text">{{marque}}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Nombres de jour :</ion-label>
+          <ion-input [(ngModel)]="paiement.jour" type="number">{{selectDate.length}}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Dates :</ion-label>
+          <ion-input [(ngModel)]="paiement.date">{{selectDate}}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Prix: </ion-label>
+          <ion-input [(ngModel)]="paiement.prix" type="number">{{prix*selectDate.length}}€ </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Caution : </ion-label>
+          <ion-input [(ngModel)]="paiement.caution" type="number">{{caution}}€</ion-input>
+        </ion-item>
+
+      </ion-list>
+      </ion-card-content>
+      </ion-card>
+  <!--
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Ma preuve de paiement
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Vous pouvez charger la preuve de paiement ici<br>
+      </p>
+      <ion-item lines="none">
+        <ion-button color = "secondary" (click)="addPhotoToGallery()">
+          <ion-icon name="camera"></ion-icon>camera</ion-button>
+      </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label>Titre: </ion-label>
+      <ion-input [(ngModel)]="firebaseData.titre" type="text" >{{titreProduit}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Marque: </ion-label>
+      <ion-input  [(ngModel)]="firebaseData.marque" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prix: </ion-label>
+      <ion-input [(ngModel)]="firebaseData.number" type="number"></ion-input>
+    </ion-item>
+  </ion-list>
+  </ion-card-content>
+  </ion-card>-->
+</ion-content>
