@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content >
+<ion-item lines="none">
+  <h1>Louer votre bien </h1>
+</ion-item>
+
+
+  <!--<div class="btn-ajout-photo"><ion-button>
+    <ion-icon slot="start" name="image-outline"></ion-icon>
+    Ajouter photos
+  </ion-button></div> -->
+
+
+  <div class="formulaire">
+    <ion-list>
+      <ion-item lines="none">
+        <ion-button expand="block" color = "secondary" (click)="addPhotoToGallery()">
+          <ion-icon slot="start" name="camera"></ion-icon>Camera</ion-button>
+      </ion-item>
+
+
+        <ion-card *ngFor="let photo of photoService.photos; index as position">
+                <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
+        <ion-button slot="end" fill="clear" (click)=" addImage({title:'test'})">
+          <ion-icon name="cloud-upload"></ion-icon></ion-button>
+        </ion-card>
+
+
+        <ion-item>
+          <ion-label>Titre: </ion-label>
+          <ion-input [(ngModel)]="firebaseData.titre" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Date d'achat: </ion-label>
+          <ion-input [(ngModel)]="firebaseData.date" type="date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Description/ État: </ion-label>
+          <ion-input  [(ngModel)]="firebaseData.description" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Catégorie: </ion-label>
+          <ion-select placeholder="choisir une catégorie" [(ngModel)]="firebaseData.categorie">
+            <ion-select-option value="Barbecue">Barbecue</ion-select-option>
+            <ion-select-option value="Tondeuse">Tondeuse</ion-select-option>
+            <ion-select-option value="Nettoyer">Nettoyer haute pression</ion-select-option>
+            <ion-select-option value="Coupe bordure">Coupe bordure</ion-select-option>
+            <ion-select-option value="Debroussailleuse">Débroussailleuse</ion-select-option>
+            <ion-select-option value="Tronconneuse">Tronçonneuse</ion-select-option>
+            <ion-select-option value="Taille haie">Taille haie</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>Marque: </ion-label>
+          <ion-input  [(ngModel)]="firebaseData.marque" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Caution: </ion-label>
+          <ion-input [(ngModel)]="firebaseData.caution" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Prix: </ion-label>
+          <ion-input [(ngModel)]="firebaseData.prix" type="number"></ion-input>
+        </ion-item>
+
+
+
+
+
+
+
+        <ion-item >
+       <ion-button expand="block" color = "tertiary" (click)="addFirebase()" expand="block">
+        <ion-icon name="cloud-upload"></ion-icon>Ajouter</ion-button>
+        </ion-item>
+
+    </ion-list>
+
+
+</div>
+</ion-content>
+
+    <ion-footer collapse="fade">
+      <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button href="categories">
+          <ion-icon class="icon-footer" name="home-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button href="cherche">
+          <ion-icon class="icon-footer" name="search-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button href="ajout">
+          <ion-icon id="plus" class="icon-footer" name="add-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button href="compte">
+          <ion-icon class="icon-footer" name="person-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+    </ion-toolbar>
+    </ion-footer>
